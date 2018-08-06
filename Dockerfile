@@ -66,5 +66,6 @@ RUN apk add --no-cache --virtual .build-deps-yarn curl gnupg tar \
   && apk del .build-deps-yarn
 
 RUN npm npm i npm@latest -g
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 CMD [ "node" ]
